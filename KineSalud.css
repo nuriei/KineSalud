@@ -1,0 +1,8 @@
+/* imagen de fondo general*/
+#contenedor {
+    background-image: url(imagenes/fondo.png); 
+    background-size: cover; /* hace q no se deforme, es mejor q 100%*/
+    width: 100%;
+    height: 600px;
+    float: right;
+}
