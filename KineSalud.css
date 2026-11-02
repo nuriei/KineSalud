@@ -1,3 +1,7 @@
+/* color de fondo del body  */
+body {
+    background-color: rgb(180, 183, 186);
+}
 /* imagen de fondo general*/
 #contenedor {
     background-image: url(imagenes/fondo.png); 
