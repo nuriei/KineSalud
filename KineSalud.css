@@ -5,12 +5,13 @@ body {
 }
 /* imagen de fondo general*/
 #contenedor {
-    background-image: url('imagenes/fondo.png'); 
-    background-size: cover;          
+    background-image: url('imagenes/fondo3.png'); 
+    background-size: 100% 100%; /* Ajusta la imagen para que cubra todo el contenedor */
     background-position: center center; /* Centra la imagen para que el recorte sea simétrico */
     background-repeat: no-repeat;    
-    width: 100%;                     
-    max-width: 1400px;               /* Limita el ancho máximo para que no se estire demasiado en pantallas gigantes */
+    width: 100%;                       /* Ancho total */
+    height: 650px;               
+    max-width: 1470px;               /* Limita el ancho máximo para que no se estire demasiado en pantallas gigantes */
     margin: 0 auto;                  /* Centra el contenedor principal en la pantalla */
     min-height: 80vh;                /* Da una altura proporcional fluida */
     overflow: hidden;                
@@ -26,6 +27,8 @@ body {
     font-family: 'Courier New', Courier, monospace;
     color: white;
     opacity: 0.8;
+    font-size: clamp(1.2rem, 2.5vw, 2rem);/*como no me gustaba q cuando se achicaba se deformaba todo busque esta opcion q lo hace responsivo*/
+
 }
 #imagen h1{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -36,7 +39,7 @@ body {
 #imagen p{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color:  rgb(16, 5, 56);
-    width: 47%;
+    width: 80%;
     margin-left: 20px;
     
 }
@@ -50,6 +53,8 @@ body {
 
 /*opciones tratamientos*/
 #imagen ul li{
+    margin-top: 10px;
+    margin-left: 80px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: rgb(16, 5, 56);
 }
@@ -60,4 +65,35 @@ body {
     font-size: 19px;
     width: 45%;
 
+}
+#menu {
+    background-color: rgb(148, 147, 147);
+    width: 430px;
+    height:45px;
+    float: right;
+    opacity: 1;
+} 
+#menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#menu ul li {
+    float: right;    
+}
+#menu a{
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+}
+.barra{
+    color: black;
+    padding: 15px 0 0 0;
+}
+#menu a:hover{
+    color:    rgb(16, 5, 56);
+    background-color: rgb(124, 121, 121);
 }
