@@ -103,3 +103,38 @@ body {
     color:    rgb(16, 5, 56);
     background-color: rgb(124, 121, 121);
 }
+#kinebot{
+    border-top-left-radius: 20px;
+    margin-top: 20px;
+    width: 50%;
+    height: 300px;
+    float: left; 
+    background-image: url('imagenes/kinebot.png');
+    background-size: cover;
+    background-position: center;
+    box-sizing: border-box;
+}
+#gimnasio{
+    border-top-right-radius: 20px;
+    margin-top: 20px;
+    width: 50%;
+    height: 300px;
+    float: left; 
+    background-image: url('imagenes/Kineo_02.jpg');
+    background-size: cover; 
+    background-position: center;
+    box-sizing: border-box;
+}
+#kineo{
+    border-bottom-right-radius: 20;
+    border-bottom-left-radius: 20px;
+    width: 100%;
+    height: 200px;
+    background-image: url(imagenes/gim.png);
+    background-size: 100%;
+    margin-top: 5px;
+    margin-bottom: 20xpx;
+    
+    float: left;
+
+}
