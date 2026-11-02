@@ -5,11 +5,15 @@ body {
 }
 /* imagen de fondo general*/
 #contenedor {
-    background-image: url(imagenes/fondo.png); 
-    background-size: cover; /* hace q no se deforme, es mejor q 100%*/
-    width: 100%;
-    height: 600px;
-    float: right;
+    background-image: url('imagenes/fondo.png'); 
+    background-size: cover;          
+    background-position: center center; /* Centra la imagen para que el recorte sea simétrico */
+    background-repeat: no-repeat;    
+    width: 100%;                     
+    max-width: 1400px;               /* Limita el ancho máximo para que no se estire demasiado en pantallas gigantes */
+    margin: 0 auto;                  /* Centra el contenedor principal en la pantalla */
+    min-height: 80vh;                /* Da una altura proporcional fluida */
+    overflow: hidden;                
 }
 /*pagina inicio*/
 #margen {
@@ -25,13 +29,13 @@ body {
 }
 #imagen h1{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color:rgb(51, 53, 204);
+    color: rgb(16, 5, 56);
     margin-left: 20px;
     opacity: 0.8;
 }
-#imagen h4{
+#imagen p{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color: rgb(250, 188, 16);
+    color:  rgb(16, 5, 56);
     width: 47%;
     margin-left: 20px;
     
