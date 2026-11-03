@@ -48,7 +48,7 @@ body {
     
 }
 /*trabajamos con */
-#imagen h2{
+#imagen h1{
     text-shadow: 1px 1px 3pxrgba(51, 53, 58, 0.8);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color:   rgb(16, 5, 56);
@@ -160,7 +160,7 @@ body {
   
 }
 
-.tratamientos h3{
+.tratamientos h1{
     margin-left: 0;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: rgb(16, 5, 56);
