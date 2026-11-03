@@ -66,10 +66,13 @@ body {
 }
 /* consulta por...*/
 #pie_pag em{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color:rgb(51, 53, 204);
-    font-size: 19px;
-    width: 45%;
+    margin-top: 16px;
+    margin-left: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    text-shadow: 1px 1px 1px rgba(17, 17, 18, 0.8);
+    opacity: 0.8;
+    font-size: clamp(1.2rem, 2.5vw, 2rem);/*copie responsivo de margen*/
 
 }
 #menu {
