@@ -64,17 +64,7 @@ body {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: rgb(16, 5, 56);
 }
-/* consulta por...*/
-#pie_pag em{
-    margin-top: 16px;
-    margin-left: 20px;
-    font-family: 'Courier New', Courier, monospace;
-    color: white;
-    text-shadow: 1px 1px 1px rgba(17, 17, 18, 0.8);
-    opacity: 0.8;
-    font-size: clamp(1.2rem, 2.5vw, 2rem);/*copie responsivo de margen*/
 
-}
 #menu {
     background-color: rgb(148, 147, 147);
     width: 430px;
@@ -197,4 +187,52 @@ si bien en la pagina desde chome se vehia bien en el preview no fui probando de 
         margin-bottom: 5px;
         line-height: 0.9; /* interlineado */  
     }
+
+}
+/* consulta por...*/
+#pie_pag em{
+    margin-top: 10x;
+    margin-left: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    text-shadow: 1px 1px 1px rgba(17, 17, 18, 0.8);
+    opacity: 0.8;
+    display: block;
+    
+    font-size: clamp(0.7em, 1.5vw, 2.5rem);/*copie responsivo de margen*/
+
+}
+#pie_pag{
+    width: 100%;
+
+}
+#pie_pag ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#pie_pag ul li{
+    float: right;
+    margin-right: 20px;
+}
+.separador{
+    
+    color: rgb(25, 25, 24);
+    font-size: 20px;
+    padding: 5px;
+    
+}
+#contacto a{/*aca preparo el cursor para q crezca cuando paso por arriba*/
+    display: inline-block;
+    cursor: pointer; 
+}
+#contacto a:hover{
+    transform: scale(1.3); /* con esto le doy tamaño */
+}
+#contacto img {
+    display: block;
+}
+#contacto ul {/*traje adelnate de todo los botones asi el focus es mas preciso*/
+    position: relative;
+    z-index: 5; 
 }
