@@ -132,7 +132,7 @@ body {
     border-bottom-left-radius: 20px;
     width: 100%;
     height: 240px;
-    background-image: url(imagenes/pie.png);
+    background-image: url('../imagenes/pie.png');
     background-size: 100% 100%;
     margin-top: 5px;
     margin-bottom: 20px;
@@ -191,19 +191,19 @@ si bien en la pagina desde chome se vehia bien en el preview no fui probando de 
 }
 /* consulta por...*/
 #pie_pag em{
-    margin-top: 10x;
-    margin-left: 20px;
+    margin-top: 10px;
+    margin-left: 25px;
     font-family: 'Courier New', Courier, monospace;
     color: white;
-    text-shadow: 1px 1px 1px rgba(17, 17, 18, 0.8);
+    text-shadow: 1px 1px 1px rgba(17, 17, 18, 1);
     opacity: 0.8;
     display: block;
-    
+    display: inline;;
     font-size: clamp(0.7em, 1.5vw, 2.5rem);/*copie responsivo de margen*/
 
 }
 #pie_pag{
-    width: 100%;
+width: 100%;
 
 }
 #pie_pag ul{
