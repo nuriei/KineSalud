@@ -242,7 +242,8 @@ si bien en la pagina desde chome se vehia bien en el preview no fui probando de 
     z-index: 5; 
 }
 /*configuracion de pagina galeria*/
-#galeria {
+#galeria,
+form {
     max-width: 700px;   
     min-height: 500px;  
     margin: 70px auto;  
@@ -252,8 +253,8 @@ si bien en la pagina desde chome se vehia bien en el preview no fui probando de 
     box-sizing: border-box;
     text-align: center;   
 }
-/*configuracion de la altura de los botones de la galeria*/
-#galeria input[type="button"] {
+#galeria input[type="button"], 
+form input[type="button"] {
     background-color: rgba(48, 73, 99, 1); 
     color: white;
     border: none;
@@ -261,7 +262,7 @@ si bien en la pagina desde chome se vehia bien en el preview no fui probando de 
     font-family: 'Courier New', Courier, monospace;
     font-size: 16px;
     font-weight: bold;
-    cursor: pointer;/*pone la manito*/
+    cursor: pointer; /* pone la manito */
     border-radius: 6px;
 }
 /*configuracion de la imagen de la galeria*/

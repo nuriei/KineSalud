@@ -1,3 +1,5 @@
+
+//carrusel 
 var numero = 0;
 var imagenes = [
     "../imagenes/instalaciones_frente.jpg",
