@@ -5,7 +5,7 @@ body {
 }
 /* imagen de fondo general*/
 #contenedor {
-    background-image: url('imagenes/fondo3.png'); 
+    background-image: url('../imagenes/fondo3.png'); 
     background-size: 100% 100%; /* Ajusta la imagen para que cubra todo el contenedor */
     background-position: center center; /* Centra la imagen para que el recorte sea simétrico */
     background-repeat: no-repeat;    
@@ -106,7 +106,7 @@ body {
     width: 50%;
     height: 300px;
     float: left; 
-    background-image: url('imagenes/kinebotRectangular.avif');
+    background-image: url('../imagenes/kinebotRectangular.avif');
     background-size: cover;
     background-size: 100% 100%;
     background-position: center;
@@ -119,7 +119,7 @@ body {
     width: 50%;
     height: 300px;
     float: left; 
-    background-image: url('imagenes/kineoX3.png');
+    background-image: url('../imagenes/kineoX3.png');
     background-size: cover; 
     background-size: 100% 100%;
     background-position: center;
