@@ -70,9 +70,28 @@ function cargar() {
     var telefono = document.formulario.telefono.value;
     var tel = parseInt(telefono);
     if (!parseInt(telefono) || isNaN(tel)||(telefono.length < 10)) {
-        alert('el telefono a ingresar debe anteponer el codigo de area sin 0 seguido del numero sin 15          -- "ejemplo:2664298749" --  gracias');
+        alert('el telefono a ingresar debe ser sin 0 ni 15 -- "ejemplo:2664298749" --  gracias');
         document.formulario.telefono.focus();
         return false;
     }
+        // valida checkbox
+  var cantchk = 0;
+var cant = document.formulario.tratamiento.length;
 
+for (var i = 0; i < cant; i++) {
+    if (document.formulario.tratamiento[i].checked) {
+        cantchk++;    
+    }
+}
+
+if (cantchk < 1) {
+    alert('por favor seleccione minimo un tratamiento a reaziarse');
+    return false;
+}
+
+if (confirm('confiirma los datos ingresados para reserbar turno?')) {
+    return true;
+} else {
+    return false;
+}
 }

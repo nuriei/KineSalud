@@ -254,7 +254,7 @@ form {
     text-align: center;   
 }
 #galeria input[type="button"], 
-form input[type="button"] {
+form input[type="submit"] {
     background-color: rgba(48, 73, 99, 1); 
     color: white;
     border: none;
