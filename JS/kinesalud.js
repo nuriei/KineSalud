@@ -64,7 +64,7 @@ function siguiente() {
 
      else if (ed > 0 && ed < 18) {
          if (ed < 18) {
-            errorDiv.textContent = "esta queriendo registrar un menor de edad (entre 1 y 14 años)y eso no es posible, inscriba al tutoy y aclare en cometarios la edad del menor a atender, el mismo debe sebe acompañarlo en la consulta";
+            errorDiv.textContent = "esta queriendo registrar un menor de edad (entre 1 y 17 años)y eso no es posible, inscriba al tutoy y aclare en cometarios la edad del menor a atender, el mismo debe sebe acompañarlo en la consulta";
 //             alert('esta queriendo registrar un menor de edad (entre 1 y 14 años)y eso no es posible, inscriba al tutoy y aclare en cometarios la edad del menor a atender, el mismo debe sebe acompañarlo en la consulta');
          return false;
     }
@@ -158,7 +158,7 @@ var resumenViejo = document.getElementById("resumen-turno");
     for (var j = 0; j < datos.length; j++) {
         var item = document.createElement("li");
         item.textContent = datos[j];
-        item.style.marginBottom = "2px"; 
+        item.style.marginBottom = "2px 0"; 
         lista.appendChild(item);
     }
 
