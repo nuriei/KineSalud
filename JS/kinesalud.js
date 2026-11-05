@@ -2,13 +2,13 @@
 //carrusel 
 var numero = 0;
 var imagenes = [
-    "../imagenes/instalaciones_frente.jpg",
-    "../imagenes/instalaciones_kinebot.jpg",
-    "../imagenes/instalaciones_kinebot2.jpg",
-    "../imagenes/instalaciones_magnetoterapia.jpg",
-    "../imagenes/instalaciones_masajes.jpg",
-    "../imagenes/instalaciones_punsion.jpg",
-    "../imagenes/instalaciones_camaraGravedaad.jpg"
+    "imagenes/instalaciones_frente.jpg",
+    "imagenes/instalaciones_kinebot.jpg",
+    "imagenes/instalaciones_kinebot2.jpg",
+    "imagenes/instalaciones_magnetoterapia.jpg",
+    "imagenes/instalaciones_masajes.jpg",
+    "imagenes/instalaciones_punsion.jpg",
+    "imagenes/instalaciones_camaraGravedaad.jpg"
 ];
 function anterior() {
     numero--;
