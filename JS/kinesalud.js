@@ -24,74 +24,96 @@ function siguiente() {
     }
     document.getElementById("imagen_galeria").src = imagenes[numero];
 }
+
+
+//despues de revisar los requisitos del trabajo practico me di cuenta q no puedo usar alert 
+//asi q tengo q generar todas las validaciones de nuevo
+
 //validaciones de formulario
-function cargar() {
+ function cargar() {
+    var errorDiv = document.getElementById("error");
+    errorDiv.textContent = "";
 
-    //valida nombre
-    var nombre = document.formulario.nombre.value.trim();
-    var tam_nbre = nombre.length;
-    var sinNumero = /\d/; //eso busca q no tenga numeros
-    if ((!nombre) || (tam_nbre < 3)) {
-        alert('el campo nombre debe tener minimo 3 letras');
+//     //valida nombre
+     var nombre = document.formulario.nombre.value.trim();
+     var tam_nbre = nombre.length;
+     var sinNumero = /\d/; //eso busca q no tenga numeros
+     if ((!nombre) || (tam_nbre < 3)) {
+        errorDiv.textContent = "el campo nombre debe tener al menos 3 letras";
+//         alert('el campo nombre debe tener minimo 3 letras');
         document.formulario.nombre.focus();
         return false;
-    }
-    else if (sinNumero.test(nombre)) {//.test testea q se cumpla en nombre
-        alert('esta area no puede tener numeros');
-        document.formulario.nombre.focus();
-        return false;
-    }
+     }
+     else if (sinNumero.test(nombre)) {//.test testea q se cumpla en nombre
+        errorDiv.textContent = "el area de nombre no puede tener numeros";
+//         alert('esta area no puede tener numeros');
+         document.formulario.nombre.focus();
+         return false;
+     }
 
-    //valida edad
-    var edad = document.formulario.edad.value;
-    var ed = parseInt(edad);
-    // vacío, no es un num, es menor o igual a 0
-    if ((!edad) || isNaN(ed) || (ed <= 0)) {
-        alert('por favor ingrese una edad numerica valida... si el paciente es bebe registre al padre o tutor y aclare en comentarios la edad del menor a atender');
+//     //valida edad
+     var edad = document.formulario.edad.value;
+     var ed = parseInt(edad);
+     // vacío, no es un num, es menor o igual a 0
+     if ((!edad) || isNaN(ed) || (ed <= 0)) {
+        errorDiv.textContent = "por favor ingrese una edad numerica valida... si el paciente es bebe registre al padre o tutor y aclare en comentarios la edad del menor a atender";
+//         alert('por favor ingrese una edad numerica valida... si el paciente es bebe registre al padre o tutor y aclare en comentarios la edad del menor a atender');
+         document.formulario.edad.focus();
+         return false;
+     }
+
+     else if (ed > 0 && ed < 18) {
+         if (ed < 18) {
+            errorDiv.textContent = "esta queriendo registrar un menor de edad (entre 1 y 14 años)y eso no es posible, inscriba al tutoy y aclare en cometarios la edad del menor a atender, el mismo debe sebe acompañarlo en la consulta";
+//             alert('esta queriendo registrar un menor de edad (entre 1 y 14 años)y eso no es posible, inscriba al tutoy y aclare en cometarios la edad del menor a atender, el mismo debe sebe acompañarlo en la consulta');
+         return false;
+    }
+}
+
+     else if (ed > 70) {
+        errorDiv.textContent = "la edad del paciente no puede ser mayor a 70 años, en caso de serlo inscribir al acompañante y aclararlo en comentarios";
+//         alert('la edad del paciente no puede ser mayor a 70 años, en caso de serlo inscribir al acompañante y aclararlo en comentarios');
         document.formulario.edad.focus();
+         return false;
+     }
+     //valida telefono
+     var telefono = document.formulario.telefono.value;
+     var tel = parseInt(telefono);
+     if (!parseInt(telefono) || isNaN(tel)||(telefono.length < 10)) {
+        errorDiv.textContent = "el telefono a ingresar debe ser sin 0 ni 15 -- ejemplo:2664298749 --  gracias";
+//         alert('el telefono a ingresar debe ser sin 0 ni 15 -- "ejemplo:2664298749" --  gracias');
+         document.formulario.telefono.focus();
+         return false;
+     }
+     //  Valida correo electrónico
+    var email = document.formulario.email.value.trim();
+    var condicionEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if ((!email) || !condicionEmail.test(email)) {
+        errorDiv.textContent = "ingrese un correo electrónico de formato valido";
+        document.formulario.email.focus();
         return false;
     }
 
-    else if (edad > 0 && edad < 18) {
-        if (edad < 15) {
-            alert('esta queriendo registrar un menor de edad (entre 1 y 14 años)y eso no es posible, inscriba al tutoy y aclare en cometarios la edad del menor a atender, el mismo debe sebe acompañarlo en la consulta');
-        } else {
-            alert('el paciente es menor de edad (entre 15 y 17 años)al momento de la consulta debe venir acompañado del tutor y aclarar los datos del mismo en los comentarios.');
-        }
-        //aca no pongo return false; porque no quiero que corte el proceso de carga del formulario, solo quiero que avise al usuario
-    }
+         // valida checkbox
+     var cantchk = 0;
+     var cant = document.formulario.tratamiento.length;
 
-    else if (edad > 70) {
-        alert('la edad del paciente no puede ser mayor a 70 años, en caso de serlo inscribir al acompañante y aclararlo en comentarios');
-        document.formulario.edad.focus();
-        return false;
-    }
-    //valida telefono
-    var telefono = document.formulario.telefono.value;
-    var tel = parseInt(telefono);
-    if (!parseInt(telefono) || isNaN(tel)||(telefono.length < 10)) {
-        alert('el telefono a ingresar debe ser sin 0 ni 15 -- "ejemplo:2664298749" --  gracias');
-        document.formulario.telefono.focus();
-        return false;
-    }
-        // valida checkbox
-  var cantchk = 0;
-var cant = document.formulario.tratamiento.length;
+     for (var i = 0; i < cant; i++) {
+         if (document.formulario.tratamiento[i].checked) {
+         cantchk++;    
+         }
+     }
 
-for (var i = 0; i < cant; i++) {
-    if (document.formulario.tratamiento[i].checked) {
-        cantchk++;    
-    }
-}
-
-if (cantchk < 1) {
-    alert('por favor seleccione minimo un tratamiento a reaziarse');
-    return false;
-}
-
-if (confirm('confiirma los datos ingresados para reserbar turno?')) {
-    return true;
-} else {
-    return false;
-}
-}
+     if (cantchk < 1) {
+//     alert('por favor seleccione minimo un tratamiento a reaziarse');
+        errorDiv.textContent = "por favor, seleccione al menos un tratamiento a realizarse";
+     return false;
+     }
+     errorDiv.textContent = "";
+     return true;
+// if (confirm('confiirma los datos ingresados para reserbar turno?')) {
+//     return true;
+// } else {
+//    return false;
+ }
+//}

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>KineSalud</title>
-   <link rel="stylesheet" type="text/css" href="CSS/KineSalud.css">
+    <link rel="stylesheet" type="text/css" href="CSS/KineSalud.css">
     <script src="JS/kinesalud.js" type="text/javascript"></script>
 </head>
 
@@ -13,6 +13,7 @@
         <h1>Ponete en contacto con nosotros</h1>
     </div>
     <div id=contenedor>
+        
         <div id="menu">
             <ul>
                 <li><a href="index.html">inicio</a></li>
@@ -22,7 +23,8 @@
                 <li><a href="Formulario.html" target="_blank">solicita turno</a></li>
             </ul>
         </div>
-        <form name="formulario" method="GET" action="#">
+       <form name="formulario" method="GET" action="#" onsubmit="return cargar();">
+            <div id="error"></div>
 
             <strong>Ingresa tus datos para ponernos en contacto:</strong>
             <br>
@@ -33,6 +35,8 @@
             <br><br>
             <strong>Telefono:</strong> <input type="text" name="telefono" maxlength="10">
             <br><br>
+            <strong>Mail:</strong> <input type="text" name="email">
+            <br><br>
             <strong>Seleccione sexo:</strong>
             <label for="muj">mujer </label>
             <input type="radio" name="sexo" value="M" id="muj" checked>
@@ -40,7 +44,7 @@
             <input type="radio" name="sexo" value="H" id="hom">
             <br><br>
             <hr>
-            <br>
+            
             <strong>Selecciona nuestros tratamientos:</strong>
             <br><br>
             <input type="checkbox" name="tratamiento" value="kinesiologia">kinesioligia
@@ -51,13 +55,11 @@
             <input type="checkbox" name="tratamiento" value="punsion seca">punsion seca
             <input type="checkbox" name="tratamiento" value="sillon de masajes">sillon de masajes
             <input type="checkbox" name="tratamiento" value="magnetoterapia">magnetoterapia
-            <br><br>
+            <br>
             <hr>
             <strong>Comentarios:</strong>
             <br>
-            <br>
-            <textarea name="comentario" rows="5" cols="25" wrap="hard"></textarea>
-            <br><br>
+            <textarea name="comentario" rows="2" cols="25" wrap="hard"></textarea>
             <hr>
             <input type="submit" value="solicitar turno" onclick="return cargar();">
         </form>
