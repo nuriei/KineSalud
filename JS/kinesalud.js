@@ -109,11 +109,67 @@ function siguiente() {
         errorDiv.textContent = "por favor, seleccione al menos un tratamiento a realizarse";
      return false;
      }
-     errorDiv.textContent = "";
-     return true;
-// if (confirm('confiirma los datos ingresados para reserbar turno?')) {
-//     return true;
-// } else {
-//    return false;
+    errorDiv.textContent = "";
+var resumenViejo = document.getElementById("resumen-turno");
+    if (resumenViejo) {
+        resumenViejo.remove();
+    }
+
+    
+    var divResumen = document.createElement("div");
+    divResumen.id = "resumen-turno";
+    divResumen.style.backgroundColor = "#e8f5e9";
+    divResumen.style.border = "1px solid #4caf50";
+    divResumen.style.padding = "25px";
+    divResumen.style.marginTop = "2px";
+    divResumen.style.borderRadius = "8px";
+
+   
+    var titulo = document.createElement("h3");
+    titulo.textContent = "¡Turno solicitado con éxito!";
+    divResumen.appendChild(titulo);
+
+    // 3. Configuramos la lista
+    var lista = document.createElement("ul");
+    lista.style.listStyle = "none";
+    lista.style.padding = "0";
+    lista.style.margin = "10px 0 0 0";
+
+
+    
+    var tratamientosArr = [];
+    var cant = document.formulario.tratamiento.length;
+    for (var i = 0; i < cant; i++) {
+        if (document.formulario.tratamiento[i].checked) {
+            tratamientosArr.push(document.formulario.tratamiento[i].value);
+        }
+    }
+    var listaTratamientos = tratamientosArr.join(", ");
+
+    
+    var datos = [
+        "Nombre: " + nombre,
+        "Correo: " + email,
+        "Edad: " + edad,
+        "Teléfono: " + telefono,
+        "Tratamientos: " + listaTratamientos
+    ];
+
+    for (var j = 0; j < datos.length; j++) {
+        var item = document.createElement("li");
+        item.textContent = datos[j];
+        item.style.marginBottom = "2px"; 
+        lista.appendChild(item);
+    }
+
+    divResumen.appendChild(lista);
+
+    var contenedorFooter = document.getElementById("resultado-footer");
+    contenedorFooter.innerHTML = "";
+    contenedorFooter.appendChild(divResumen);
+
+    
+    document.formulario.reset();
+    return false;
  }
 //}
